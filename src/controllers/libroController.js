@@ -1,6 +1,7 @@
 const libroModel = require('../models/libro');
 
 exports.getLibros = async (req, res) => {
+  console.log('¡La ruta /api/libros fue llamada!'); // Esto aparecerá en logs de Render
   try {
     const libros = await libroModel.getAll();
     res.json(libros);
